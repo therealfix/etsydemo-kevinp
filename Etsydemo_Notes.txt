@@ -1,0 +1,202 @@
+Etsydemo Notes!
+
+_______________________________________________________
+1. Get Up and Running
+	Course Introduction
+
+Refer to the Yelpdemo notes for a guide on basic setup.
+_______________________________________________________
+Installation for Mac Users
+
+_______________________________________________________
+Installation for Non-Mac Users
+
+_______________________________________________________
+2. Create Our Website
+	Create a New App
+___________________________________
+Add Our First Pages
+
+_______________________________________________________
+Add Links
+
+_______________________________________________________
+Add Listings
+
+To get the root route, 
+1. rake routes
+2. URI pattern: see /listings 
+3. Its controller action is listings#index
+4. Therefore in config/routes.rb, add root 'listings#index'
+_______________________________________________________
+3. Add Front-End Design
+	Install Bootstrap
+
+To add a Gemfile,
+1. Add your gem 'bootstrap-sass', '~> 3.3.5' in Gemfile
+2. bundle install
+3. restart rails s
+
+app/assets/javascripts/application.js
+// I've put both bootstrap-sprockets and bootstrap requires for now. Until Alex gets back to me
+//= require bootstrap-sprockets
+//= require bootstrap
+
+_______________________________________________________
+Add a Navigation Bar
+
+5:58
+_______________________________________________________
+Simplify Our Code
+
+_______________________________________________________
+Build Beautiful Forms
+
+<div class="container">
+gives padding around the edges of the body and copyright.
+
+Found in app/assets/views/layouts/application.html.erb
+_______________________________________________________
+4. Update Listings With Images
+	Install Paperclip and ImageMagick
+
+	ImageMagick should already be installed back in yelpdemo.
+_______________________________________________________
+Set Up Paperclip
+
+Bug with "Image has contents that are not what they are reported to be" when you try to upload an image to a listing:
+
+In the comments:
+
+1. Create a config/initializers/paperclip.rb with the following:
+
+require 'paperclip/media_type_spoof_detector' 
+	module Paperclip 
+		class MediaTypeSpoofDetector 
+			def spoofed? 
+			false 
+		end 
+	end 
+end
+
+2. Restart rails s
+_______________________________________________________
+Design Page Layouts
+
+What if I wanted 5 listings per row??
+
+Remember you need @listing.price if you don't have 
+<% @listings.each do |listing| %>
+_______________________________________________________
+Add Custom CSS
+
+New trick! you can select a bunch of code and tab it all over at the same time!!! This is so efficient!
+_______________________________________________________
+5. Save Our Progress
+	Set Up GitHub
+
+Don't need to go through the process again, since I already did it in Yelpdemo. Unless you're using a new computer, of course. 
+
+Alex's comment: "You should only need to go through the SSH setup once per GitHub user, not once per repository."
+
+test github connection:
+ssh -T git@github.com
+_______________________________________________________
+Commit Our Code to GitHub
+
+_______________________________________________________
+Deploy On Heroku
+
+_______________________________________________________
+6. Host Images Online
+	Set Up Dropbox
+
+_______________________________________________________
+Protect Our Account Data
+
+_______________________________________________________
+Configure Dropbox Settings
+
+_______________________________________________________
+7. Add Users
+	Install Devise
+
+_______________________________________________________
+Insert Conditional Links
+
+_______________________________________________________
+Customize Devise Forms and Alerts
+
+_______________________________________________________
+Add Names to Users
+
+_______________________________________________________
+Validate User and Listing Data
+
+_______________________________________________________
+8. Connect Users to Listings
+	Associate Listings With Users
+
+_______________________________________________________
+Set User Permissions
+
+_______________________________________________________
+Create a Seller Page
+
+_______________________________________________________
+Redesign the Seller Page
+
+_______________________________________________________
+Create a Homepage Banner
+
+_______________________________________________________
+9. Place Orders
+	Link Orders, Listings, Users (Part 1)
+
+_______________________________________________________
+Link Orders, Listings, Users (Part 2)
+
+_______________________________________________________
+Create Order History Pages
+
+_______________________________________________________
+Reorganize Order Links and URLs
+
+_______________________________________________________
+10. Accept Payments
+	Set Up Stripe
+
+_______________________________________________________
+Add Credit Card Fields
+
+_______________________________________________________
+Verify Credit Card Data
+
+_______________________________________________________
+Charge Credit Cards
+
+_______________________________________________________
+11. Transfer Payments
+	Collect Bank Account Info
+
+_______________________________________________________
+Verify Bank Account Info
+
+_______________________________________________________
+Transfer Funds
+
+_______________________________________________________
+Course Summary
+
+_______________________________________________________
+
+_______________________________________________________
+
+_______________________________________________________
+
+_______________________________________________________
+
+_______________________________________________________
+
+
+
