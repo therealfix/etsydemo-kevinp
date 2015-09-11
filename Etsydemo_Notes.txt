@@ -104,8 +104,17 @@ ssh -T git@github.com
 _______________________________________________________
 Commit Our Code to GitHub
 
+
 _______________________________________________________
 Deploy On Heroku
+
+My comment:
+After heroku keys:add, there's 
+
+Found an SSH public key at c:/User/user/.ssh/id_rsa.pub 
+Would you like to upload it to Heroku? [Yn] 
+
+I put y for yes, but would that be compromising security?
 
 _______________________________________________________
 6. Host Images Online
