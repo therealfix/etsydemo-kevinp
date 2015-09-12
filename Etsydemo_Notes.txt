@@ -166,6 +166,17 @@ _______________________________________________________
 8. Connect Users to Listings
 	Associate Listings With Users
 
+error:
+SQLite3::BusyException: database is locked
+
+To solve, open sqlitebrower to development.sqlite3
+Delete the offending listing and save (write changes)
+rake db:migrate, restart rails s
+
+NoMethodError in Listings#index
+undefined method `name' for nil:NilClass
+
+To be expected: have to add user_id to each listing in sqlite 
 _______________________________________________________
 Set User Permissions
 
