@@ -180,6 +180,9 @@ To be expected: have to add user_id to each listing in sqlite
 _______________________________________________________
 Set User Permissions
 
+http://stackoverflow.com/questions/16519828/rails-4-before-filter-vs-before-action
+
+"before_action is just a new syntax for before_filter and old syntax isn't even deprecated."
 _______________________________________________________
 Create a Seller Page
 
