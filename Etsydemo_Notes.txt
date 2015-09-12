@@ -133,15 +133,28 @@ This is the lesson with another removing homepage image display... again.
 _______________________________________________________
 Configure Dropbox Settings
 
+didn't git push heroku master in this one
 _______________________________________________________
 7. Add Users
 	Install Devise
 
+Admin: test@example.com
+kevin436
 _______________________________________________________
 Insert Conditional Links
 
 _______________________________________________________
 Customize Devise Forms and Alerts
+
+<div class="field"> and <div class="actions">: 
+convert all to 
+<div class="form-group">
+
+views/sessions/new.html.erb:
+adding class:"form-control" to checkbox makes it big, and centered. Strange effect, Alex didn't have that. Either way don't use form-control on the checkbox.
+
+Alex's custom dismissible alert:
+<!--change name == :notice to name.to_s == "notice" in rails 4.1+ -->
 
 _______________________________________________________
 Add Names to Users

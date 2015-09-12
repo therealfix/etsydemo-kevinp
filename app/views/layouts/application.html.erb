@@ -11,6 +11,18 @@
 <%= render 'layouts/header' %>
 
 <div class="container">
+
+	<!--Required for Devise gem -->
+  	<% flash.each do |name, msg| %>
+    <% if msg.is_a?(String) %>
+    <!--change name == :notice to name.to_s == "notice" in rails 4.1+ -->
+      <div class="alert alert-<%= name.to_s == "notice" ? "success" : "danger" %> alert-dismissable">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        <%= content_tag :div, msg, :id => "flash_#{name}" %>
+      </div>
+    <% end %>
+  <% end %>
+
 	<%= yield %>
 
 <%= render 'layouts/footer' %>
