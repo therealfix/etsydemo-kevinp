@@ -119,10 +119,15 @@ I put y for yes, but would that be compromising security?
 _______________________________________________________
 6. Host Images Online
 	Set Up Dropbox
+That extra comma in app/models/listing.rb though...
+That image error where you need to comment the img display tag in index.html.erb, and add images (again), then re-enable the image tag to show images.
 
 _______________________________________________________
 Protect Our Account Data
 
+Run figaro install (v1.0 +)rather than rails generate figaro:install (.0.7)
+
+figaro heroku:set -e production rather than rake figaro:heroku for reasons above
 _______________________________________________________
 Configure Dropbox Settings
 
