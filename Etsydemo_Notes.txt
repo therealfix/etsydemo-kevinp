@@ -242,9 +242,14 @@ _______________________________________________________
 _______________________________________________________
 Remaining to-do's:
 
-Change Gemfile
-add
-# gem 'sdoc', '~> 0.4.0',          group: :doc
-?
+admin:
+test@example.com
+kevin436
+Kevin Peng
+
+users:
+johndoe@gmail.com
+kevin436
+John Doe
 
 
