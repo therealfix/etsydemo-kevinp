@@ -52,8 +52,9 @@ body {
   }
 }
 
+/*Change jumbotron.jpg?dl=0 to jumbotron.jpg?raw=1*/
 .jumbotron {
-	background-image: url('jumbotron.jpg');
+	background-image: url('https://www.dropbox.com/s/z9idya2g29b3bbp/jumbotron.jpg?raw=1');
 	
 	h1, h2 {
 		font-family: guardian-egyptt, georgia, serif;

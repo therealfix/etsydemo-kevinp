@@ -192,6 +192,9 @@ Redesign the Seller Page
 _______________________________________________________
 Create a Homepage Banner
 
+Render a file in your browser:
+https://www.dropbox.com/en/help/201
+/*Change jumbotron.jpg?dl=0 to jumbotron.jpg?raw=1*/
 _______________________________________________________
 9. Place Orders
 	Link Orders, Listings, Users (Part 1)
