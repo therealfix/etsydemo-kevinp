@@ -189,6 +189,8 @@ Create a Seller Page
 _______________________________________________________
 Redesign the Seller Page
 
+Saved with 9. Reorganize Order Links and URLs
+
 _______________________________________________________
 Create a Homepage Banner
 
@@ -258,10 +260,13 @@ Create Order History Pages
 _______________________________________________________
 Reorganize Order Links and URLs
 
+git add --all to get rid of red deleted file links after you
+git add .
 _______________________________________________________
 10. Accept Payments
 	Set Up Stripe
 
+in localhost page source, the second meta content doesn't have pk_test... Alex's does. Maybe it's just a change in the syntax, what stripe displays. I dunno
 _______________________________________________________
 Add Credit Card Fields
 
