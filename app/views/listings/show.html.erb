@@ -11,8 +11,9 @@
         <!-- @listing is a shorthand for the current listing -->
         <br>
         <div class="center">
-        <%= link_to "Buy It Now", new_listing_order_path(@listing), class: "btn btn-primary" %>
-    </div>
+        <%= link_to "Buy It Now", new_listing_order_path(@listing), class: "btn btn-primary", data: { no_turbolink: true} %>
+            <!-- no_turbolink: true to load the Stripe coffeescript -->
+        </div>
     </div>
 
 </div>

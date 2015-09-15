@@ -273,6 +273,7 @@ Add Credit Card Fields
 _______________________________________________________
 Verify Credit Card Data
 
+Ask Alex for a way, so you don't have to refresh the page after you put in invalid card information to use the complete order button.
 _______________________________________________________
 Charge Credit Cards
 
