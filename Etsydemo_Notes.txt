@@ -287,6 +287,31 @@ Verify Bank Account Info
 _______________________________________________________
 Transfer Funds
 
+Tell Alex: 
+
+After trying to create a new listing, Stripe error: have to authorize accounts on Stripe dashboard. Then, error 
+
+Stripe::InvalidRequestError in ListingsController#create
+An account with this email already exists.
+
+Is this because we've combined creating a new listing with associating bank info with users at the same time?
+
+Extracted source (around line #39):
+37
+38
+39
+40
+41
+42
+          
+    token = params[:stripeToken]
+
+    recipient = Stripe::Account.create(
+      :managed => false,
+      :country => 'US',
+      :email => current_user.email
+
+Rails.root: C:/Users/user/etsydemo
 _______________________________________________________
 Course Summary
 
