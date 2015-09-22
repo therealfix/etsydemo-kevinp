@@ -6,7 +6,7 @@ class OrdersController < ApplicationController
     
   def sales
     @orders = Order.all.where(seller: current_user).order("created_at DESC")
-  end 
+  end
 
   def purchases
     @orders = Order.all.where(buyer: current_user).order("created_at DESC")
@@ -38,25 +38,22 @@ class OrdersController < ApplicationController
         :currency => "usd",
         :card => token
         )
-      flash[:notice] = "Thanks for ordering!"
+      
     rescue Stripe::CardError => e
       flash[:danger] = e.message
     end
 
-    transfer = Stripe::Transfer.create(
-      :amount => (@listing.price * 95).floor,
-      :currency => "usd",
-      :recipient => @seller.recipient
+    transfer = Stripe::Transfer.create( 
+      :amount => (@listing.price * 95).floor, 
+      :currency => "usd", 
+      :destination => @seller.recipient 
       )
 
     respond_to do |format|
       if @order.save
-# old   format.html { redirect_to @order, notice: 'Order was successfully created.' }
-        format.html { redirect_to root_url}
-# old   format.json { render :show, status: :created, location: @order }
+        format.html { redirect_to root_url, notice: "Thanks for ordering!"}
         format.json { render action: 'show', status: :created, location: @order }
       else
- # old  format.html { render :new }        
         format.html { render action: 'new' }
         format.json { render json: @order.errors, status: :unprocessable_entity }
       end
